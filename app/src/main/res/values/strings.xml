@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Keep_everyday</string>
+    <string name="rope_jump">跳绳</string>
+    <string name="跑步">跑步</string>
+    <string name="波比跳">波比跳</string>
+    <string name="开合跳">开合跳</string>
+    <string name="卷腹">卷腹</string>
+    <string name="提交">提交</string>
+    <string name="title_activity_check_">总结</string>
+</resources>

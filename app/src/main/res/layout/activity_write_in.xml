@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".write_Activity">
+
+    <ImageView android:layout_width="650dp"
+               android:layout_height="820dp"
+               android:background="#E648A894"
+               tools:ignore="MissingConstraints" app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.502"
+               android:id="@+id/imageView2" app:layout_constraintTop_toTopOf="parent"/>
+    <Switch
+            android:text="@string/跑步"
+            android:layout_width="202dp"
+            android:layout_height="81dp"
+            android:id="@+id/switch1" android:textSize="36sp"
+            android:background="#00F3DCA1" android:checked="false"
+            android:layout_marginTop="53dp" android:layout_marginBottom="74dp"
+            app:layout_constraintBottom_toTopOf="@+id/rope_jumping" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="115dp"
+            android:layout_marginStart="115dp" tools:checked="false"/>
+    <Button
+            android:onClick="click"
+            android:text="@string/rope_jump"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/rope_jumping" android:background="#E456CA65"
+            android:layout_marginBottom="48dp" app:layout_constraintTop_toBottomOf="@+id/switch1"
+            app:layout_constraintEnd_toStartOf="@+id/rope_jump_times"
+            app:layout_constraintBottom_toTopOf="@+id/poppy_jump" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="36dp" android:layout_marginStart="36dp" android:layout_marginEnd="78dp"
+            android:layout_marginRight="78dp"/>
+    <Button
+            android:onClick="click"
+            android:text="@string/波比跳"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/poppy_jump" android:background="#C67AE7DB"
+            app:layout_constraintTop_toBottomOf="@+id/rope_jumping"
+            app:layout_constraintEnd_toStartOf="@+id/poppy_jump_times" android:layout_marginBottom="55dp"
+            app:layout_constraintBottom_toTopOf="@+id/openandclosing_jump" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="36dp" android:layout_marginStart="36dp" android:layout_marginEnd="78dp"
+            android:layout_marginRight="78dp"/>
+    <Button
+            android:onClick="click"
+            android:text="@string/开合跳"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/openandclosing_jump" android:background="#C9D3F17F"
+            app:layout_constraintTop_toBottomOf="@+id/poppy_jump"
+            app:layout_constraintEnd_toStartOf="@+id/open_closing_jump_times" android:layout_marginBottom="53dp"
+            app:layout_constraintBottom_toTopOf="@+id/sitAndlying" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="36dp" android:layout_marginStart="36dp" android:layout_marginEnd="78dp"
+            android:layout_marginRight="78dp"/>
+    <Button
+            android:onClick="click"
+            android:text="@string/卷腹"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/sitAndlying" android:background="#CBF88686"
+            app:layout_constraintTop_toBottomOf="@+id/openandclosing_jump"
+            app:layout_constraintEnd_toStartOf="@+id/sitAndlying_times" android:layout_marginBottom="57dp"
+            app:layout_constraintBottom_toTopOf="@+id/submit" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="36dp" android:layout_marginStart="36dp" android:layout_marginEnd="81dp"
+            android:layout_marginRight="81dp"/>
+    <TextView
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:id="@+id/rope_jump_times" android:text="0"
+            android:textSize="24sp" android:layout_marginTop="215dp"
+            app:layout_constraintStart_toEndOf="@+id/rope_jumping" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="68dp" app:layout_constraintBottom_toTopOf="@+id/poppy_jump_times"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="47dp"
+            android:layout_marginRight="47dp" android:autoText="false"/>
+    <TextView
+            android:text="0"
+            android:layout_width="115dp"
+            android:layout_height="35dp"
+            android:id="@+id/poppy_jump_times" android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/rope_jump_times"
+            app:layout_constraintStart_toEndOf="@+id/poppy_jump" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="95dp" app:layout_constraintBottom_toTopOf="@+id/open_closing_jump_times"
+            android:layout_marginEnd="47dp" android:layout_marginRight="47dp"/>
+    <TextView
+            android:text="0"
+            android:layout_width="115dp"
+            android:layout_height="35dp"
+            android:id="@+id/open_closing_jump_times" android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/poppy_jump_times"
+            app:layout_constraintStart_toEndOf="@+id/openandclosing_jump" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="82dp" app:layout_constraintBottom_toTopOf="@+id/sitAndlying_times"
+            android:layout_marginEnd="47dp" android:layout_marginRight="47dp"/>
+    <TextView
+            android:text="0"
+            android:layout_width="115dp"
+            android:layout_height="35dp"
+            android:id="@+id/sitAndlying_times" android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/open_closing_jump_times"
+            app:layout_constraintStart_toEndOf="@+id/sitAndlying" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="166dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="44dp" android:layout_marginRight="55dp"/>
+    <Button
+            android:onClick="click"
+            android:text="@string/提交"
+            android:layout_width="188dp"
+            android:layout_height="0dp"
+            android:id="@+id/submit" android:background="#C990A745"
+            app:layout_constraintTop_toBottomOf="@+id/sitAndlying" android:layout_marginBottom="45dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.497"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
